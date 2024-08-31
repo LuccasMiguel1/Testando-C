@@ -23,11 +23,12 @@ int main()
     int cpf[11];
     int m1[9]={10,9,8,7,6,5,4,3,2};
     int m2[10]={11,10,9,8,7,6,5,4,3,2};
-    int i;
+    int i, tam;
     char entrada[20];
     printf("Insira o seu CPF: ");
     fgets(entrada, 20, stdin);
-    for(i=0;i<20;i++){
+    tam=strlen(entrada);
+    for(i=0;i<tam;i++){
         int j;
         if(entrada[i]>=48 && entrada[i]<=57){ 
             cpf[j]=entrada[i]-48;
