@@ -98,13 +98,8 @@ int main ()
     }
     int val=(B[linha][mes-1])+dia;
     resposta=procurarLinha(7,6,C,val);
-    if (resposta==0) printf("Dia %i/%i/%i foi em um Domingo", dia, mes, ano);
-    else if (resposta==1) printf("Dia %i/%i/%i foi em uma segunda", dia, mes, ano);
-    else if (resposta==2) printf("Dia %i/%i/%i foi em uma terça", dia, mes, ano);
-    else if (resposta==3) printf("Dia %i/%i/%i foi em uma quarta", dia, mes, ano);
-    else if (resposta==4) printf("Dia %i/%i/%i foi em uma quinta", dia, mes, ano);
-    else if (resposta==5) printf("Dia %i/%i/%i foi em uma sexta", dia, mes, ano);
-    else printf("Dia %i/%i/%i foi em uma sábado", dia, mes, ano);
+    char diasdasemana[7][30] = {"Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"};
+    printf("Dia %i/%i/%i foi em um(a) %s", dia, mes, ano, diasdasemana[resposta]);
 
     return 0;
 }
